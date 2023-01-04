@@ -7,12 +7,16 @@ int main()
     int choice;
     int count = 0;
     printf("Welcome to the Quiz Game \n\n");
-    printf("---> Press 1 to start the game \n");
-    printf("---> Press 0 to quit the game \n");
+    printf("\t\t>>> Press 1 to start the game \n");
+    printf("\t\t>>> Press 0 to quit the game \n");
     scanf("%d", &i);
     if (i == 1)
     {
-        printf("\t\t\t\t--------------The game has started--------------\n\n\n\n\n");
+        printf("\t\t--------------The game has started--------------\n\n\n\n\n");
+        printf(">>>---------------some information about the quiz game---------------<<<");
+        printf("\n\t There are 5 topics in this quiz ");
+        printf("\n\t Each topic contains 10 questions ");
+        printf("\n\t Each question contains 10 points ");
     }
     else if (i == 0)
     {
@@ -22,21 +26,19 @@ int main()
     {
         printf("Invalid number\n\n");
     }
-
+start:
     if (i == 1)
     {
         printf("\t--------------Choose the any topic you want to learn--------------\n\n");
         printf("1) Basic computer \n2) Computer system \n3) Networking \n4) C-programming \n5) JavaScript");
         scanf("%d", &choice);
-        system("cls");
-
         switch (choice)
         {
         case 1:
             printf("________________________Q.no-1_______________________________\n");
             printf("Which one is the first search engine in internet?\n\n");
             printf(" 1) Google \n 2) Archie\n 3) Wais\n 4)  Altavista\n");
-            printf("Enter your answer : \n");
+            printf("Enter your answer: \n");
             scanf("%d", &ans);
             if (ans == 2)
             {
@@ -193,8 +195,19 @@ int main()
                 printf("Correct answer option is 4\n");
             }
 
-            printf("Each question holds the value of 5 points\n");
-            printf("Your score is %d", 5 * count);
+            printf("\n\nEach question holds the value of 10 points\n");
+            printf("Your score is %d", 10 * count);
+            printf("\n\n\t\tDo you want to learn more ?");
+            printf("\n\n\t\tpress 1 for continue and press 2 for quit ");
+            scanf("%d", &ans);
+            if (ans == 1)
+            {
+                goto start;
+            }
+            else
+            {
+                goto end;
+            }
             break;
 
         case 2:
@@ -358,8 +371,19 @@ int main()
                 printf("Correct answer option is 4\n");
             }
 
-            printf("Each question holds the value of 5 points\n");
-            printf("Your score is %d", 5 * count);
+            printf("Each question holds the value of 10 points\n");
+            printf("Your score is %d", 10 * count);
+            printf("\n\n\t\tDo you want to learn more ?");
+            printf("\n\n\t\tpress 1 for continue and press 2 for quit ");
+            scanf("%d", &ans);
+            if (ans == 1)
+            {
+                goto start;
+            }
+            else
+            {
+                goto end;
+            }
 
             break;
 
@@ -525,8 +549,20 @@ int main()
                 printf("Correct answer option is 4\n");
             }
 
-            printf("Each question holds the value of 5 points\n");
-            printf("Your score is %d", 5 * count);
+            printf("Each question holds the value of 10 points\n");
+            printf("Your score is %d", 10 * count);
+
+            printf("\n\n\t\tDo you want to learn more ?");
+            printf("\n\n\t\tpress 1 for continue and press 2 for quit ");
+            scanf("%d", &ans);
+            if (ans == 1)
+            {
+                goto start;
+            }
+            else
+            {
+                goto end;
+            }
             break;
 
         case 4:
@@ -690,8 +726,19 @@ int main()
                 printf("Correct answer option is 2\n");
             }
 
-            printf("Each question holds the value of 5 points\n");
-            printf("Your score is %d", 5 * count);
+            printf("Each question holds the value of 10 points\n");
+            printf("Your score is %d", 10 * count);
+            printf("\n\n\t\tDo you want to learn more ?");
+            printf("\n\n\t\tpress 1 for continue and press 2 for quit ");
+            scanf("%d", &ans);
+            if (ans == 1)
+            {
+                goto start;
+            }
+            else
+            {
+                goto end;
+            }
 
             break;
 
@@ -856,9 +903,22 @@ int main()
                 printf("Correct answer option is 1\n");
             }
 
-            printf("Each question holds the value of 5 points\n");
-            printf("Your score is %d", 5 * count);
+            printf("Each question holds the value of 10 points\n");
+            printf("Your score is %d", 10 * count);
+            printf("\n\n\t\tDo you want to learn more ?");
+            printf("\n\n\t\tpress 1 for continue and press 2 for quit ");
+            scanf("%d", &ans);
+            if (ans == 1)
+            {
+                goto start;
+            }
+            else
+            {
+                goto end;
+            }
         }
+    end:
+        printf("\n\n\t\t\nThank you for playing");
     }
     return 0;
 }
